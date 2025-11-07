@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react-swc';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import checker from 'vite-plugin-checker';
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  base: '/', // ✅ Important
   plugins: [
     tsconfigPaths(),
     react(),
@@ -22,5 +22,4 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 3000,
   },
-  base: '/',
 });
